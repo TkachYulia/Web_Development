@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box; 
+    background: rgb(166, 218, 250);
+}
+
+#inputBox {
+    margin-left: 5%;
+    width: 60%;
+    height: 40px;
+    padding: 10px;
+    float: center;
+    border-radius: 10px;
+    background-color: ivory;
+    height: 60px;
+    font-size: 25px;
+}
+.header{
+    padding-top: 5%;
+    padding-left: 30%;
+    font-size: 30px;
+}
+.header h2{
+    margin-left: 20%;
+}
+.addBtn{
+    padding: 7px;
+    margin-left: 30px;
+    width: 35%;
+    height: 60px;
+    background:  rgb(20, 97, 185);
+    color: white;
+    float: center;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.addBtn:hover {
+    background-color: #bbb;
+  }
+  ul {
+    margin-top: 6%;
+    margin-left: 25%;
+    width: 70%;
+    padding: 0;
+    
+  }
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background-color: ivory;
+    margin-top: 3%;
+    font-size: 18px;
+    border-style: ridge;
+    padding-left: 10%;
+    border-radius: 10px;
+}
+ul li.checked{
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 0 4px 4px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+.close {
+    background-color: ivory;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+    border-radius: 10px;
+  }
