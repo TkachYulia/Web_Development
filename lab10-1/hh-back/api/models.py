@@ -8,8 +8,15 @@ class Company(models.Model):
     address = models.TextField()
     class Meta:
         verbose_name_plural = "companies"
-    def __str__(self):
-        return self.name
+
+    def to_json(self):
+        return {
+            'Company Name': self.name,
+            'id': self.id,
+            'Description': self.description,
+            'City': self.city,
+            'Address': self.address
+        }
 
 class Vacancy(models.Model):
     name = models.CharField(max_length=150)
@@ -19,5 +26,11 @@ class Vacancy(models.Model):
     class Meta:
         verbose_name_plural = "vacancies"
 
-    def __str__(self):
-        return self.name
+    def to_json(self):
+        return {
+            'Name': self.name,
+            'id': self.id,
+            'Description': self.description,
+            'Salary': self.salary,
+            'Company': self.company.name
+        }
